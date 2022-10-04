@@ -284,10 +284,10 @@ p {
     width: 30px;
     border-radius: 50%;
     cursor: pointer;
-    margin-right: 8px;
-    margin-top: 8px;
-    
+   
     position: absolute;
+    top: 8px;
+    right: 8px;
     
 }
 
@@ -304,15 +304,12 @@ p {
     width: 528px;
     background-color: var(--main-title-color);
 
-    display: inline-block;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    display: flex;
-    justify-content: end;
-    align-items: flex-start;
+    padding: 40px;
 
     
 }
@@ -324,17 +321,13 @@ p {
     text-align: center;
     letter-spacing: 0.03em;
 
-    margin-top: 40px;
-    margin-left: 40px;
-    margin-right: 40px;
     margin-bottom: 12px;
 }
 
 .field-input {
 display: block;
 text-align: left;
-margin: 4px 40px 10px;
-
+margin-bottom: 10px;
 
 color: var(--subtitle-text-color);
 font-size: 12px;
@@ -343,10 +336,11 @@ letter-spacing: 0.01em;
 
 }
 
-
+.field-input:nth-child(5) {
+    margin-bottom: 20px;
+}
 
 .para-model{
-margin-top: 4px;
 display: block;
 width: 100%;
 height: 40px;
@@ -377,7 +371,6 @@ outline: none;
     resize: none;
     width: 448px;
     height: 120px;
-    margin-bottom: 10px;
 
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -392,6 +385,7 @@ outline: none;
 
 .modal-user{
     position: relative;
+    margin-top: 4px;
 }
 
 .accept-title{
@@ -410,11 +404,6 @@ outline: none;
     background-color: var(--accent-text-color);
 }
 
-.accept-checkbox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .checkbox{
   border-radius: 3px;
@@ -803,6 +792,7 @@ top: 30%;
     line-height: 1.87;
     letter-spacing: 0.06em;
     display: flex;
+    align-items: center;
     border: none;
     cursor: pointer;
     
