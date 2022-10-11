@@ -1,0 +1,74 @@
+
+.nav-item.current {
+    color: var(--accent-text-color);
+}
+
+.auto {
+    cursor: pointer;
+}
+
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.block {
+    display: block;
+}
+
+.section {
+    padding-bottom: 94px;
+}
+
+.border {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 80px;
+}
+.current::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: var(--accent-text-color);
+    border-radius: 2px;
+    bottom: 0%;
+    left: 0%;
+}
+
+.liste {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+.main-title-team {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.18;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    margin-bottom: 50px;
+}
