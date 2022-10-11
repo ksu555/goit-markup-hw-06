@@ -1,0 +1,91 @@
+
+.logo {
+    @include font(700, 26px, 1.19);
+
+    color: var(--title-text-color);
+    font-family: 'Raleway', sans-serif;
+
+    @include text-decoration(0.03em, none);
+
+    margin-right: 93px;
+}
+
+.logo>.blue,
+.header>.blue,
+.blue {
+    color: var(--accent-text-color);
+    text-decoration: none;
+}
+
+
+
+.nav-list {
+    display: flex;
+    padding-left: 0px;
+
+    &__item {
+        @include font(500, 14px, 1.14);
+
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        color: var(--title-text-color);
+
+        @include text-decoration(0.02em, none);
+
+            display: block;
+            position: relative;
+
+            &:hover,
+            &:focus{
+                color: var(--accent-text-color);
+            }
+    }
+    li {
+        &:not(:last-child) {
+        margin-right: 50px;
+        }
+        }
+    a {
+        @include paddingtb (32px, 32px);
+        }
+}
+
+
+.info {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+
+    &__contact{
+        @include font(500, 14px, 1.14);
+
+        display: block;
+
+        @include display(flex, center);
+
+        gap: 10px;
+        
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        
+        color: var(--subtitle-text-color);
+        fill: var(--subtitle-text-color);
+        letter-spacing: 0.02em;
+
+        &:hover,
+        &:focus {
+                color: var(--accent-text-color);
+                fill: var(--accent-text-color);
+            }
+        }
+           
+    }
+     a {
+            @include paddingtb (32px, 32px);
+        }
+    
+     li  {
+        &:not(:last-child) {
+            margin-right: 50px;
+        }
+        }
+   
+
