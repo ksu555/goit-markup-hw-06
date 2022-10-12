@@ -6,11 +6,6 @@
 .list {
     display: flex;
 
-    li {
-       &:not(:first-child){
-        margin-right: 30px;
-       }
-    }
     &__item{
         padding: 25px 100px;
         background-color: var(--button-color);
@@ -34,3 +29,6 @@
     }
 }
 
+.list li:not(:first-child) {
+     margin-right: 30px;
+ }
