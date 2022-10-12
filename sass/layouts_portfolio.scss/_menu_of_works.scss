@@ -34,7 +34,7 @@
             }
         }
    
-    .sample-liste li :not(:first-child) {
+    .sample-liste li:not(:first-child) {
                  margin-left: 8px;
              }
 
