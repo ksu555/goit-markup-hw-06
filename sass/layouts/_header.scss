@@ -39,15 +39,16 @@
                 color: var(--accent-text-color);
             }
     }
-    li {
-        &:not(:last-child) {
-        margin-right: 50px;
-        }
-        }
-    a {
-        @include paddingtb (32px, 32px);
-        }
+   
+   
 }
+
+.nav-list a {
+     @include paddingtb (32px, 32px);
+ }
+ .nav-list li:not(:last-child) {
+         margin-right: 50px;
+     }
 
 
 .info {
@@ -78,14 +79,11 @@
         }
            
     }
-     a {
+.info a {
             @include paddingtb (32px, 32px);
         }
-    
-     li  {
-        &:not(:last-child) {
-            margin-right: 50px;
-        }
-        }
-   
+
+.info li:not(:last-child) {
+    margin-right: 50px;
+}
 
