@@ -1,0 +1,221 @@
+.close-button {
+    margin: 9px 9px;
+    background: var(--main-title-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+}
+
+.backdrop {
+    @include position(fixed, 0, 0);
+
+    @include size(100%, 100%);
+    
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 10;
+
+    transform: scale(1);
+
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transform: scale(10);
+
+
+}
+
+.modal-close {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    background: var(--main-title-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    @include size(30px, 30px);
+    border-radius: 50%;
+    cursor: pointer;
+
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    fill: var(--activ-button-color);
+}
+
+.modal-user input:focus+svg {
+    fill: var(--activ-button-color);
+}
+
+.modal {
+    @include size(528px, 581px);
+    
+    background-color: var(--main-title-color);
+
+    @include position(absolute, 50%, 50%);
+
+    transform: translate(-50%, -50%);
+    padding: 40px;
+
+
+}
+
+.modal-title {
+    @include font(700, 20, 1.15);
+    
+    @include text-align(00.03em, center);
+
+    margin-bottom: 12px;
+}
+
+.field-input {
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+
+    color: var(--subtitle-text-color);
+    @include font(400, 12, 1.17);
+
+    letter-spacing: 0.01em;
+
+}
+
+.field-input:nth-child(5) {
+    margin-bottom: 20px;
+}
+
+.para-model {
+    display: block;
+    width: 100%;
+    height: 40px;
+
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    @include paddingtb(12px, 12px);
+
+    padding-left: 42px;
+   
+}
+
+.field-input input,
+.field-input textarea {
+    outline: none;
+}
+
+.field-input input:focus,
+.field-input textarea:focus {
+    border: 1px solid var(--activ-button-color);
+    border-radius: 4px;
+}
+
+
+.para-model-text {
+    margin-top: 4px;
+    padding: 12px 16px;
+    resize: none;
+    @include size(448px, 120px);
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+
+.textarea placeholder {
+    @include font(400, 12, 1.17);
+
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-user {
+    position: relative;
+    margin-top: 4px;
+}
+
+.accept-title {
+    @include font(400, 14px, 1.71);
+
+    letter-spacing: 0.03em;
+    color: var(--subtitle-text-color);
+
+    @include display(flex, center);
+
+    justify-content: center;
+    margin-left: 8px;
+}
+
+.accept-title .checkbox:checked+svg {
+    background-color: var(--accent-text-color);
+}
+
+
+.checkbox {
+    border-radius: 3px;
+    border: 2px solid var(--title-text-color);
+    @include size(16px, 15px );
+   
+    margin-right: 8px;
+    @include display(flex, center);
+
+    justify-content: center;
+}
+
+.accept input:checked+label .checkbox {
+    background-color: var(--accent-text-color);
+    border: none;
+}
+
+.accept-document {
+    @include font(400, 14, 1.71);
+
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+    padding-left: 2px;
+
+    color: #2196F3;
+}
+
+.button-send {
+    @include size(200px, 50px);
+   
+    text-align: center;
+    background-color: var(--accent-text-color);
+    color: var(--main-title-color);
+    margin-top: 34px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-color: var(--accent-text-color);
+
+
+    @include font(700, 16, 1.87);
+    letter-spacing: 0.06em;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-send:hover,
+.button-send:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    background-color: var(--activ-button-color);
+    cursor: pointer;
+}
+.icon-modal {
+    @include position(absolute, 30%, 12px);
+ }
+
+ .close-icon {
+    position: absolute;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(50%, 50%);
+ }
+
+
+
