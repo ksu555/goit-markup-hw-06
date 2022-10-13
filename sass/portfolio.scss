@@ -1,12 +1,9 @@
-@import "./base/variables";
+@import "./utils/variables";
 @import "./base/common";
-@import "./base/utils";
-@import"./base/mixins";
-@import"./base/templates";
+@import"./vendors/mixins";
+@import"./vendors/templates";
 
 
 @import "./layouts/header";
-@import "./layouts_portfolio.scss/menu_of_works";
+@import "./pages/menu_of_works";
 @import "./layouts/footer";
-
-
