@@ -1,6 +1,6 @@
 .clients {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    @include paddingtb(94, 94);
+
 }
 .clients-items {
     display: flex;
@@ -14,10 +14,10 @@
     
             transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
-            width: 170px;
-            height: 92px;
-            display: inline-flex;
-            align-items: center;
+            @include size(170, 92);
+        
+            @include display(inline-flex, center);
+            
             justify-content: center;
             border: 1px solid #AFB1B8;
             fill: var(--svg-color-grey);
