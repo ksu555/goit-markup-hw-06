@@ -21,8 +21,9 @@
             flex-wrap: wrap;
 
             color: var(--main-title-color);
-            text-align: center;
-            letter-spacing: 0.06em;
+
+            @include text-align(0.06em, center);
+           
             text-transform: uppercase;
     
         }
@@ -38,9 +39,9 @@
 
             @include font(700, 16px, 1.87);
 
-            letter-spacing: 0.06em;
+            @include text-align(0.06em, center);
+    
             font-family: inherit;
-            text-align: center;
             padding: 10px 32px;
         
                     &:focus,
