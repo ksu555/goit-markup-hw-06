@@ -52,9 +52,12 @@
 
 
 .info {
-    display: flex;
-    flex-direction: row;
+    @extend %display;
+
     margin-left: auto;
+    &_li:not(:last-child) {
+            margin-right: 50px;
+        }
 
     &__contact{
         @include font(500, 14px, 1.14);
@@ -79,11 +82,9 @@
         }
            
     }
+
+
 .info a {
             @include paddingtb (32px, 32px);
         }
-
-.info li:not(:last-child) {
-    margin-right: 50px;
-}
 
