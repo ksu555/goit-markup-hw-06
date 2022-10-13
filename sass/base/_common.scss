@@ -1,6 +1,6 @@
-
-.nav-list__item.current {
+.current {
     color: var(--accent-text-color);
+  
 }
 
 .auto {
@@ -27,8 +27,8 @@
 
 .border {
     border-bottom: 1px solid var(--border-color);
-}
-
+    overflow: hidden;
+ }
 .top {
     display: flex;
     align-items: center;
@@ -42,7 +42,7 @@
     height: 4px;
     background: var(--accent-text-color);
     border-radius: 2px;
-    bottom: 0%;
+    bottom: -1%;
     left: 0%;
 }
 
@@ -69,6 +69,5 @@
     line-height: 1.18;
     text-align: center;
     letter-spacing: 0.03em;
-
     margin-bottom: 50px;
-}
+ }
