@@ -11,7 +11,7 @@
   --svg-color-grey: #afb1b8;
 }
 
-.nav-item.current {
+.nav-list__item.current {
   color: var(--accent-text-color);
 }
 
