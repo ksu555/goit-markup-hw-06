@@ -4,6 +4,7 @@
 @import"./base/mixins";
 @import"./base/templates";
 
+@import "./components/modal";
 @import "./layouts/header";
 @import "./layouts/hero";
 @import "./layouts/advantage";
@@ -14,4 +15,3 @@
 
 
 
-@import "./components/modal";
