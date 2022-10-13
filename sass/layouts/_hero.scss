@@ -6,7 +6,10 @@
     background-position: center;
     max-width: 1600px;
 
-    @include margin(auto);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    
     
     @include paddingtb (200px, 200px);
    
@@ -25,6 +28,8 @@
             @include text-align(0.06em, center);
            
             text-transform: uppercase;
+            justify-content: center;
+            display: inline-block;
     
         }
 
