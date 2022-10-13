@@ -28,3 +28,17 @@
     letter-spacing: $ls;
     text-decoration: $td;
 }
+@mixin size ($wid, $heig) {
+    width: $wid;
+    height: $heig;
+}
+@mixin text-align ($let, $texal) {
+    letter-spacing: $let;
+    text-align: $texal;
+   
+}
+@mixin position ($position, $top, $left) {
+    position: $position;
+    top: $top;
+    left: $left;
+}
