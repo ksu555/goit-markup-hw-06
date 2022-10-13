@@ -5,8 +5,8 @@
 }
 
 .container-team {
-    display: flex;
-    flex-direction: row;
+    @extend %display;
+
     padding-left: 0px;
     gap: 30px;
 }
@@ -14,9 +14,8 @@
 .social-page {
     margin-top: 16px;
     display: inline;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    @extend %display;
+
     justify-content: center;
     gap: 10px;
 
@@ -25,8 +24,8 @@
     
             transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
-            width: 44px;
-            height: 44px;
+            @include size(44, 44);
+
             padding: 12px 12px;
             background-color: var(--main-title-color);
             fill: var(--svg-color-grey);
@@ -49,22 +48,20 @@
 
     &__subtitle {
             color: var(--title-text-color);
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 1.19;
-            letter-spacing: 0.03em;
-            text-align: center;
+
+            @include font(500, 16px, 1.19);
+            
+            @include text-align(0.03em, center);
+            
             margin-bottom: 10px;
         }
     
     &__desc {
             color: var(--subtitle-text-color);
-            font-size: 16px;
-            line-height: 1.19;
-            letter-spacing: 0.03em;
-    
-            text-align: center;
-    
+
+            @include font(400, 16px, 1.19);
+
+            @include text-align(0.03em, center);
     
         }
 }
