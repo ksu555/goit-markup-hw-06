@@ -1,16 +1,15 @@
-@import "./base/variables";
-@import "./base/utils";
+@import "./utils/variables";
 @import "./base/common";
-@import"./base/mixins";
-@import"./base/templates";
+@import"./vendors/mixins";
+@import"./vendors/templates";
 
-@import "./components/modal";
+@import "./layouts/modal";
 @import "./layouts/header";
 @import "./layouts/hero";
-@import "./layouts/advantage";
-@import "./layouts/what_we_do";
-@import "./layouts/our_team";
-@import "./layouts/our_clients";
+@import "./pages/advantage";
+@import "./pages/what_we_do";
+@import "./pages/our_team";
+@import "./pages/our_clients";
 @import "./layouts/footer";
 
 
