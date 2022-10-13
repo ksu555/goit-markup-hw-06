@@ -37,7 +37,7 @@ a {
   text-decoration: none;
 }
 
-.nav-item.current {
+.nav-list__item.current {
   color: var(--accent-text-color);
 }
 
@@ -207,8 +207,8 @@ a {
 
 .hero {
   background: #C4C4C4;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero.jpg");
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(".././images/hero.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(".././images/hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
