@@ -707,7 +707,7 @@ top: 30%;
     margin: -1px;
 } */
 
-.container-liste-btn {
+/* .container-liste-btn {
     justify-content: center;
     display: flex;
     margin-left: auto;
@@ -815,5 +815,5 @@ top: 30%;
 .project-shadow:hover .holder,
 .project-shadow:focus .holder {
     transform: translateY(-100%);
-}
+} */
 
