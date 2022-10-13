@@ -6,11 +6,10 @@
 }
 
 .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    @include position(fixed, 0, 0);
+
+    @include size(100%, 100%);
+    
     background: rgba(0, 0, 0, 0.2);
     z-index: 10;
 
@@ -24,175 +23,166 @@
     pointer-events: none;
     visibility: hidden;
     transform: scale(10);
+
+
+}
+
+.modal-close {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    background: var(--main-title-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    @include size(30px, 30px);
+    border-radius: 50%;
+    cursor: pointer;
+
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    fill: var(--activ-button-color);
+}
+
+.modal-user input:focus+svg {
+    fill: var(--activ-button-color);
 }
 
 .modal {
-    height: 581px;
-    width: 528px;
+    @include size(528, 581);
+    
     background-color: var(--main-title-color);
 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include position(absolute, 50%, 50%);
 
+    transform: translate(-50%, -50%);
     padding: 40px;
 
-  
-        }
+
+}
+
+.modal-title {
+    @include font(700, 20, 1.15);
     
+    @include text-align(00.03em, center);
 
-  .modal__close {
-      transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-      background: var(--main-title-color);
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      height: 30px;
-      width: 30px;
-      border-radius: 50%;
-      cursor: pointer;
-
-      position: absolute;
-      top: 8px;
-      right: 8px;
-
-      &:hover,
-      &F:focus {
-          fill: var(--activ-button-color);
-      }
-  }
-.modal-title{
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 1.15;
-        text-align: center;
-        letter-spacing: 0.03em;
-        
-        margin-bottom: 12px;
-    }
+    margin-bottom: 12px;
+}
 
 .field-input {
     display: block;
     text-align: left;
     margin-bottom: 10px;
+
     color: var(--subtitle-text-color);
-    font-size: 12px;
-    line-height: 1.17;
+    @include font(400, 12, 1.17);
+
     letter-spacing: 0.01em;
-           }
+
+}
 
 .field-input:nth-child(5) {
     margin-bottom: 20px;
- }
-           
+}
+
+.para-model {
+    display: block;
+    width: 100%;
+    height: 40px;
+
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    @include paddingtb(12, 12);
+
+    padding-left: 42px;
+   
+}
+
 .field-input input,
 .field-input textarea {
     outline: none;
-    }
-            
+}
+
 .field-input input:focus,
 .field-input textarea:focus {
     border: 1px solid var(--activ-button-color);
     border-radius: 4px;
-                        }
+}
 
-
-
-.modal-user {
-    input:focus+svg {
-        fill: var(--activ-button-color);
-    }
-    position: relative;
-    margin-top: 4px;
-    &__para {
-            display: block;
-            width: 100%;
-            height: 40px;
-    
-    
-            border: 1px solid rgba(33, 33, 33, 0.2);
-            border-radius: 4px;
-            padding-left: 42px;
-            padding-top: 12px;
-            padding-bottom: 12px;
-        }
-    &__icon {
-                    position: absolute;
-                    left: 12px;
-                    top: 30%;
-        
-                }
-} 
 
 .para-model-text {
     margin-top: 4px;
     padding: 12px 16px;
     resize: none;
-    width: 448px;
-    height: 120px;
+    @include size(448, 120);
 
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 }
 
 .textarea placeholder {
-    font-size: 12px;
-    line-height: 1.17;
+    @include font(400, 12, 1.17);
+
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
 }
 
-.accept  {
-    &__title {
-        font-size: 14px;
-        line-height: 1.71;
-        letter-spacing: 0.03em;
-        color: var(--subtitle-text-color);
-    
-        
-       
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: 8px;
-        height: 24px;
-        
-    
-         }
-    .checkbox:checked+svg {
-            background-color: var(--accent-text-color);
-        }
-    input:checked+label .checkbox {
-            background-color: var(--accent-text-color);
-            border: none;
-        }
-    &__document {
-            font-size: 14px;
-            line-height: 1.71;
-            letter-spacing: 0.03em;
-            text-decoration-line: underline;
-            padding-left: 2px;
-    
-            color: #2196F3;
-        }
-
+.modal-user {
+    position: relative;
+    margin-top: 4px;
 }
+
+.accept-title {
+    @include font(400, 14, 1.71);
+
+    letter-spacing: 0.03em;
+    color: var(--subtitle-text-color);
+
+    @include display(flex, center);
+
+    justify-content: center;
+    margin-left: 8px;
+}
+
+.accept-title .checkbox:checked+svg {
+    background-color: var(--accent-text-color);
+}
+
 
 .checkbox {
     border-radius: 3px;
     border: 2px solid var(--title-text-color);
-    width: 16px;
-    height: 15px;
+    @include size(16, 15 );
+   
     margin-right: 8px;
-    display: flex;
-    align-items: center;
+    @include display(flex, center);
+
     justify-content: center;
 }
 
+.accept input:checked+label .checkbox {
+    background-color: var(--accent-text-color);
+    border: none;
+}
+
+.accept-document {
+    @include font(400, 14, 1.71);
+
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+    padding-left: 2px;
+
+    color: #2196F3;
+}
 
 .button-send {
-    width: 200px;
-    height: 50px;
+    @include size(200, 50);
+   
     text-align: center;
     background-color: var(--accent-text-color);
     color: var(--main-title-color);
@@ -203,19 +193,26 @@
     border-color: var(--accent-text-color);
 
 
-
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
+    @include font(700, 16, 1.87);
     letter-spacing: 0.06em;
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-    &:hover,
-    &:focus{
+.button-send:hover,
+.button-send:focus {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     background-color: var(--activ-button-color);
     cursor: pointer;
-    }  
 }
+.icon-modal {
+    @include position(absolute, 30%, 12px);
+ }
+
+ .close-icon {
+    @include position(absolute, 30%, 12px);
+ }
+
+
+
