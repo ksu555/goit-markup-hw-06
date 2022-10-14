@@ -346,8 +346,8 @@ a {
 
 .icon-modal {
   position: absolute;
-  top: 30%;
-  left: 12px;
+  bottom: 20%;
+  margin-left: 12px;
 }
 
 .close-icon {
