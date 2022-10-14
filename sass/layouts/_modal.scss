@@ -94,7 +94,6 @@
     width: 100%;
     height: 40px;
 
-
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     @include paddingtb(12px, 12px);
@@ -207,7 +206,9 @@
     cursor: pointer;
 }
 .icon-modal {
-    @include position(absolute, 30%, 12px);
+   position: absolute;
+   bottom: 20%;
+  margin-left: 12px;
  }
 
  .close-icon {
