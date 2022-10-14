@@ -27,7 +27,6 @@
 
 .border {
     border-bottom: 1px solid var(--border-color);
-    overflow: hidden;
  }
 .top {
     display: flex;
@@ -42,7 +41,7 @@
     height: 4px;
     background: var(--accent-text-color);
     border-radius: 2px;
-    bottom: -1%;
+    bottom: -1.25%;
     left: 0%;
 }
 
