@@ -76,7 +76,8 @@
 .field-input {
     display: block;
     text-align: left;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 4px;
 
     color: var(--subtitle-text-color);
     @include font(400, 12, 1.17);
@@ -85,9 +86,9 @@
 
 }
 
-.field-input:nth-child(5) {
-    margin-bottom: 20px;
-}
+
+
+
 
 .para-model {
     display: block;
@@ -99,6 +100,7 @@
     @include paddingtb(12px, 12px);
 
     padding-left: 42px;
+    
    
 }
 
@@ -122,6 +124,7 @@
 
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    margin-bottom: 20px;
 }
 
 .textarea placeholder {
@@ -131,9 +134,12 @@
     color: rgba(117, 117, 117, 0.5);
 }
 
+
 .modal-user {
     position: relative;
     margin-top: 4px;
+    margin-bottom: 10px;
+    
 }
 
 .accept-title {
@@ -207,8 +213,8 @@
 }
 .icon-modal {
    position: absolute;
-   bottom: 20%;
-  margin-left: 12px;
+   left: 12px;
+   top: 30%;
  }
 
  .close-icon {
