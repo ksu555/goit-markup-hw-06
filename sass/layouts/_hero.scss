@@ -1,7 +1,7 @@
 .hero {
     background: #C4C4C4;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url("../../images/hero-mob-x1.jpg") ;
+        url("../images/hero-mob-x1.jpg") ;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -18,13 +18,13 @@
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
             background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-                    url("../../images/hero-mob-x2.jpg");
+                    url("../images/hero-mob-x2.jpg");
         }
 
 
     @media screen and (min-width:768px) {
         background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-                url("../../images/hero-tab-x1.jpg");
+                url("../images/hero-tab-x1.jpg");
 
         padding: 118px 204px;
             
@@ -34,13 +34,13 @@
             (min-resolution: 192dpi),
             (min-resolution: 2dppx) {
                 background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-                    url("../../images/hero-tab-x2.jpg");
+                    url("../images/hero-tab-x2.jpg");
             }
     }
     
      @media screen and (min-width:1200px) {
-        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
-        max-width: 1600px;
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-desk-x1.jpg");
+        width: 1600px;
         @include paddingtb(200px, 200px);
 
     @media (min-device-pixel-ratio: 2),
@@ -48,7 +48,7 @@
             (min-resolution: 192dpi),
             (min-resolution: 2dppx) {
                 background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-                    url("../../images/hero-des-x2.jpg");
+                    url("../images/hero-desk-x2.jpg");
             }
         }
     
