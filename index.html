@@ -61,10 +61,10 @@
         </nav>
         <ul class="info latent">
             <li class="info_li"> <a href="mailto:info@devstudio.com" class="info__contact"> <svg  width="16"
-   height="12">
+   height="12" class="svg-email">
                 <use href="./images/icons.svg#icon-envelope"></use>
             </svg>info@devstudio.com</a></li>
-            <li class="info_li"> <a href="tel:+380961111111" class="info__contact"> <svg width="10" height="16">
+            <li class="info_li"> <a href="tel:+380961111111" class="info__contact"> <svg width="10" height="16" class="svg-tel">
                 <use href="./images/icons.svg#icon-smartphone"></use>
             </svg> +38 096 111 11 11</a></li>
         </ul>
@@ -148,31 +148,24 @@
     <h2 class="main-title">Чим ми займаємося</h2>
     <ul class="img-list">
         <li class="img-list__cover">
-            <picture>
-                <source srcset="./images/box-1-1x.jpg 1x ,
-                        ./images/box-1-2x.jpg 2x
-                                    " media="(mix-width: 1200px)" />
-
-                <img src="./images/box-1-1x.jpg" alt="Programming" class="img block">
-            </picture>
+            <img class="img block" srcset="
+                    ./images/box-1-1x.jpg    370w,
+                    ./images/box-1-370@2x.jpg  740w,
+        " sizes="(min-width:1200px) 370px" src="./images/box-1-1x.jpg" alt="Programming">
         <p class="img-list__text">Десктопні додатки</p></li>
         <li class="img-list__cover">
-            <picture>
-            <source srcset="./images/box-2-1x.jpg 1x ,
-                                ./images/box-2-2x.jpg 2x
-                                            " media="(mix-width: 1200px)" />
-        
-            <img src="./images/box-2-1x.jpg" alt="Testing" class="img block">
-        </picture>
+            <img class="img block" srcset="
+                    ./images/box-2-1x.jpg    370w,
+                    ./images/box-2-370@2x.jpg  740w,
+                    " sizes="(min-width:1200px) 370px"
+                src="./images/box-2-1x.jpg" alt="Testing">
+
         <p class="img-list__text">Мобільні додатки</p></li>
         <li class="img-list__cover">
-            <picture>
-                <source srcset="./images/box-3-1x.jpg 1x ,
-                ./images/box-3-2x.jpg 2x
-                " media="(mix-width: 1200px)" />
-            
-                <img src="./images/box-3-1x.jpg" alt="Design" class="img block">
-            </picture>
+            <img class="img block" srcset="
+                ./images/box-3-1x.jpg    370w,
+                ./images/box-3-370@2x.jpg  740w,
+            " sizes="(min-width:1200px) 370px" src="./images/box-3-1x.jpg" alt="Design">
         <p class="img-list__text">Дизайнерські рішення</p></li>
     </ul>
     </div>
@@ -190,7 +183,7 @@
                             ./images/team-igor-desk-270@2x.jpg    540w,
                             ./images/team-igor-tab-354@2x.jpg    708w,
                             ./images/team-igor-mob-450@2x.jpg    900w
-                            " sizes="(min-width:1200px) 270px, (min-width:767px) 354px, 450px" 
+                            " sizes="(min-width:1200px) 270px, (min-width:767px) 354px, (min-width:270px) 450px" 
                              src="./images/team-igor-desk-1.jpg" alt="Product Designer">
            <div class="team-cards"><h3 class="team-cards__subtitle">Ігор Дем'яненко</h3> 
             <p class="team-cards__desc">Product Designer</p>
