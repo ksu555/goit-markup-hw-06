@@ -1,19 +1,45 @@
 .footer {
     background-color: var(--background-color-black);
-
     @include paddingtb(60px, 60px);
 }
 
 .footer-logo-left {
-    @include display(flex, flex-start);
-
-    justify-content: left;
-    display: inline-block;
+   
+    @media screen and (min-width:768px) {
+            justify-content: flex-start;
+            margin-right: 165px;
+        }
+    
+    @media screen and (min-width:1200px) {
+        @include display(flex, flex-start);
+        
+        justify-content: center;
+        display: inline-block;
+        margin-right: 0px;
+        }
 }
 
 .footer-container {
-    @include display(flex, baseline);
-    
+    text-align: center;
+
+    @media screen and (min-width:1200px) {
+        display: flex;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1200px) {
+    .tab-footer {
+            display: flex;
+            justify-content: space-evenly;
+        }
+}
+
+@media screen and (min-width:1200px)  {
+    .tab-footer {
+        display: flex;
+       
+    }
 }
 
 .footer-logo {
@@ -30,6 +56,8 @@
 
 .footer-info {
     @include paddingrl (0px, 0px);
+
+    margin-bottom: 60px;
    
     &__address {
             transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -75,8 +103,14 @@
 
 
 .footer-social {
-    text-align: left;
-    margin-left: 70px;
+    text-align: center;
+    margin-bottom: 60px;
+    
+    @media screen and (min-width:1200px) {
+         margin-left: 70px;
+            text-align: left;
+        }
+
 
     &__text {
         @include font(700, 14px, 1.14);
@@ -90,35 +124,54 @@
     }
 
     &__items {
-       @extend %display;
-        gap: 10px;
-}
-
-    &__link {
         display: flex;
+        justify-content: center;
         text-align: center;
-
-        transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-        @include size(44, 44);
-
-        padding: 12px 12px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.1);
-
-        &:hover,
-        &:focus {
-                background: var(--accent-text-color);
+        gap: 10px;
+    
+        @media screen and (min-width:1200px) {
+               
+            flex-direction: row;
             }
-}
+     }
 
     &__icon {
         fill: var(--main-title-color);
 }
-}
+ }
+
+.footer-social__link {
+
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+
+      transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      @include size(44px, 44px);
+
+      padding: 12px 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+
+    &:hover,
+    &:focus {
+            background: var(--accent-text-color);
+        }
+ }
 
 .footer-mailing {
-    margin-left: 93px;
+    text-align: center;
+
+    @media screen and (min-width:768px) {
+      display: table-caption;
+      margin-left: 144px;
+    }
+    
+    @media screen and (min-width:1200px) {
+            margin-left: 93px;
+        }
     &__text {
         @include font(700, 14px, 1.14);
            
@@ -134,18 +187,26 @@
 
 
 .footer-submit {
-    display: flex;
     outline: none;
+    
+    @media screen and (min-width:1200px) {
+            display: flex;
+        }
+   
+    button{
+        display: inline-flex;
+        justify-content: center;
 
+        }
    &__input-email {
             font-size: 16px;
             line-height: 1.25;
-    
-            @include size(358px, 50px);
-           
+            
             margin-right: 12px;
             padding-left: 16px;
-    
+
+            @include size(450px, 50px);
+
             border: 1px solid rgba(255, 255, 255, 0.3);
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
             border-radius: 4px;
@@ -153,6 +214,15 @@
             color: var(--main-title-color);
             display: inline-block;
             outline-style: none;
+            margin-bottom: 20px;
+            
+            @media screen and (min-width:768px) {
+                @include size(450px, 50px);
+            }
+            
+            @media screen and (min-width:1200px) {
+            @include size(358px, 50px);
+                }
     
         }
 
@@ -172,7 +242,7 @@
             
             letter-spacing: 0.06em;
             @include display(flex, center);
-           
+
             border: none;
             cursor: pointer;
 
