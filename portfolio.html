@@ -11,23 +11,28 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/portfolio.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
 </head>
 
 <body>
-<header class="border">
+<body>
+    <header class="border">
         <div class="top container">
-            <a href="./index.html" class="logo"><span class="blue">Web</span>Studio</a>
-            <nav>
+            <div class="nav-mobile"> <a href="./index.html" class="logo">
+                    <span class="blue" lang="en">Web</span>Studio</a>
+            </div>
+            <nav class="latent">
                 <ul class="nav-list">
                     <li> <a href="./index.html" class="nav-list__item ">Студія</a></li>
                     <li> <a href="./portfolio.html" class="nav-list__item current">Портфоліо</a></li>
                     <li> <a href="#" class="nav-list__item">Контакти</a></li>
                 </ul>
-    
+
             </nav>
-            <ul class="info">
-                <li class="info_li"> <a href="mailto:info@devstudio.com" class="info__contact"> <svg width="16" height="12">
+            <ul class="info latent">
+                <li class="info_li"> <a href="mailto:info@devstudio.com" class="info__contact"> <svg width="16"
+                            height="12">
                             <use href="./images/icons.svg#icon-envelope"></use>
                         </svg>info@devstudio.com</a></li>
                 <li class="info_li"> <a href="tel:+380961111111" class="info__contact"> <svg width="10" height="16">
