@@ -11,13 +11,47 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/main.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
     <title>WebStudio</title>
 </head>
 <body>
     <header class="border">
         <div class="top container">
-        <a href="./index.html" class="logo"><span class="blue">Web</span>Studio</a>
-        <nav>
+                <div class="nav-mobile"> <a   href="./index.html" class="logo">
+                        <span class="blue" lang="en">Web</span>Studio</a>
+        
+                    <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                        <svg width="40" height="40">
+                            <use href="./images/icons.svg#icon-menu"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="menu-container js-menu-container" id="mobile-menu">
+                    <button class="menu-toggle__close js-close-menu">
+                        <svg width="40" height="40">
+                            <use href="./images/icons.svg#icon-close_menu"></use>
+                        </svg>
+                    </button>
+                
+                     <ul class="menu-burger__link">
+                        <li class="menu-burger__list current_burger">Студія</li>
+                        <li class="menu-burger__list">Портфоліо</li>
+                        <li class="menu-burger__list">Контакти</li>
+                    </ul>
+                    <ul class="menu-burger__contact">
+                        <li class="menu-burger__contacts__phone">+38 096 111 11 11</li>
+                        <li class="menu-burger__contacts">info@devstudio.com</li>
+                    </ul>
+                    <ul class="menu-burger_social">
+                        <li class="menu-burger__social-link">Instagram</li>
+                        <li class="menu-burger__social-link">Twitter</li>
+                        <li class="menu-burger__social-link">Facebook</li>
+                        <li class="menu-burger__social-link">LinkedIn</li>
+                    </ul>
+                </div>
+                
+        <nav class="latent">
             <ul class="nav-list">
                 <li> <a href="./index.html" class="nav-list__item current">Студія</a></li>
                 <li> <a href="./portfolio.html" class="nav-list__item">Портфоліо</a></li>
@@ -25,7 +59,7 @@
             </ul>
             
         </nav>
-        <ul class="info">
+        <ul class="info latent">
             <li class="info_li"> <a href="mailto:info@devstudio.com" class="info__contact"> <svg  width="16"
    height="12">
                 <use href="./images/icons.svg#icon-envelope"></use>
@@ -39,8 +73,7 @@
     <main>
         <!--Hero-->
         
-<section class="hero">
-    <div class= "container">
+<section class="hero container">
     <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
     <div><button data-modal-open type="button" class="hero__btn auto">Замовити послугу</button>
     <div data-modal class="backdrop is-hidden">
@@ -82,7 +115,6 @@
         </div>
     </div>
     </div>
-    </div>
 </section>
 
         <!--Advantages-->
@@ -91,19 +123,19 @@
             <h2 class="visually-hidden"> Переваги </h2>
             
     <ul class="list">
-        <li> <div class="list__item"><svg  width="70" height="70">
+        <li class="list__frame"> <div class="list__item"><svg  width="70" height="70">
             <use href="./images/icons.svg#icon-antenna"></use>
         </svg></div><h3 class="list__title">УВАГА ДО ДЕТАЛЕЙ</h3>
             <p class="list__text">Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.</p></li>
-        <li><div class="list__item"><svg  width="70" height="70">
+        <li class="list__frame"><div class="list__item"><svg  width="70" height="70">
             <use href="./images/icons.svg#icon-clock"></use>
         </svg></div><h3 class="list__title">ПУНКТУАЛЬНІСТЬ</h3>
             <p class="list__text">Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.</p></li>
-        <li><div class="list__item"><svg  width="70" height="70">
+        <li class="list__frame"><div class="list__item"><svg  width="70" height="70">
             <use href="./images/icons.svg#icon-diagram"></use>
         </svg></div><h3 class="list__title">ПЛАНУВАННЯ</h3>
             <p class="list__text">Так само консультація з широким активом значною мірою зумовлює.</p></li>
-        <li><div class="list__item"><svg width="70" height="70">
+        <li class="list__frame"><div class="list__item"><svg width="70" height="70">
             <use href="./images/icons.svg#icon-astronaut"></use>
         </svg></div><h3 class="list__title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
             <p class="list__text">Значимість цих проблем настільки очевидна, що реалізація планових завдань.</p></li>
@@ -111,15 +143,36 @@
     </div>
 </section>
         <!--What we do?-->
-<section class="work-section section">
+<section class="work-section section latent">
     <div class="container">
     <h2 class="main-title">Чим ми займаємося</h2>
     <ul class="img-list">
-        <li class="img-list__cover"><img src="./images/box1.jpg" alt="Programming" width="370" height="294" class="img block">
+        <li class="img-list__cover">
+            <picture>
+                <source srcset="./images/box-1-1x.jpg 1x ,
+                        ./images/box-1-2x.jpg 2x
+                                    " media="(mix-width: 1200px)" />
+
+                <img src="./images/box-1-1x.jpg" alt="Programming" class="img block">
+            </picture>
         <p class="img-list__text">Десктопні додатки</p></li>
-        <li class="img-list__cover"><img src="./images/box2.jpg" alt="Testing" width="370" height="294" class="img block">
+        <li class="img-list__cover">
+            <picture>
+            <source srcset="./images/box-2-1x.jpg 1x ,
+                                ./images/box-2-2x.jpg 2x
+                                            " media="(mix-width: 1200px)" />
+        
+            <img src="./images/box-2-1x.jpg" alt="Testing" class="img block">
+        </picture>
         <p class="img-list__text">Мобільні додатки</p></li>
-        <li class="img-list__cover"><img src="./images/box3.jpg" alt="Design" width="370" height="294" class="img block">
+        <li class="img-list__cover">
+            <picture>
+                <source srcset="./images/box-3-1x.jpg 1x ,
+                ./images/box-3-2x.jpg 2x
+                " media="(mix-width: 1200px)" />
+            
+                <img src="./images/box-3-1x.jpg" alt="Design" class="img block">
+            </picture>
         <p class="img-list__text">Дизайнерські рішення</p></li>
     </ul>
     </div>
@@ -129,7 +182,16 @@
     <div class="container"> 
     <h2 class="main-title-team">Наша команда</h2>
     <ul class="container-team">
-        <li> <img src="./images/teamcard1.jpg" alt="Product Designer" width="270" height="260" class="icon block">
+        <li class="container-team__worker"> 
+        <img class="icon block" srcset="
+                            ./images/team-igor-desk-1.jpg    270w,
+                            ./images/team-igor-tab-1.jpg    354w,
+                            ./images/team-igor-mob-1.jpg    450w,
+                            ./images/team-igor-desk-270@2x.jpg    540w,
+                            ./images/team-igor-tab-354@2x.jpg    708w,
+                            ./images/team-igor-mob-450@2x.jpg    900w
+                            " sizes="(min-width:1200px) 270px, (min-width:767px) 354px, 450px" 
+                             src="./images/team-igor-desk-1.jpg" alt="Product Designer">
            <div class="team-cards"><h3 class="team-cards__subtitle">Ігор Дем'яненко</h3> 
             <p class="team-cards__desc">Product Designer</p>
             <div>
@@ -150,7 +212,16 @@
             </div>
             </div>
         </li>
-        <li><img src="./images/teamcard2.jpg" alt="Frontend Developer" width="270" height="260" class="icon block">
+        <li class="container-team__worker">
+            <img class="icon block" srcset="
+                                        ./images/team-olga-desk-1.jpg    270w,
+                                        ./images/team-olga-tab-1.jpg    354w,
+                                        ./images/team-olga-mob-1.jpg    450w,
+                                        ./images/team-olga-desk-270@2x.jpg    540w,
+                                        ./images/team-olga-tab-354@2x.jpg    708w,
+                                        ./images/team-olga-mob-450@2x.jpg    900w
+                                        " sizes="(min-width:1200px) 270px, (min-width:767px) 354px, 450px" 
+                src="./images/team-olga-desk-1.jpg" alt="Frontend Developer">
             <div class="team-cards"><h3 class="team-cards__subtitle">Ольга Рєпіна</h3> 
             <p class="team-cards__desc">Frontend Developer</p>
             <div>
@@ -171,7 +242,17 @@
             </div>
         </div>
         </li>
-        <li><img src="./images/teamcard3.jpg" alt="Marketing" width="270" height="260" class="icon block">
+        <li class="container-team__worker">
+            <img class="icon block" srcset="
+                    ./images/team-kolja-desk-1.jpg    270w,
+                    ./images/team-kolja-tab-1.jpg    354w,
+                    ./images/team-kolja-mob-1.jpg    450w,
+                    ./images/team-kolja-desk-270@2x.jpg    540w,
+                    ./images/team-kolja-tab-354@2x.jpg    708w,
+                    ./images/team-kolja-mob-450@2x.jpg    900w
+                                                    " 
+                    sizes="(min-width:1200px) 270px, (min-width:767px) 354px, 450px"
+                src="./images/team-kolja-desk-1.jpg" alt="Marketing">
             <div class="team-cards"><h3 class="team-cards__subtitle">Микола Тарасов</h3> 
             <p class="team-cards__desc">Marketing</p>
         <div>
@@ -192,7 +273,16 @@
         </div>
         </div>
         </li>
-        <li><img src="./images/teamcard4.jpg" alt="UI Designer" width="270" height="260" class="icon block">
+        <li class="container-team__worker">
+            <img class="icon block" srcset="
+                        ./images/team-micha-desk-1.jpg    270w,
+                        ./images/team-micha-tab-1.jpg    354w,
+                        ./images/team-micha-mob-1.jpg    450w,
+                        ./images/team-micha-desk-270@2x.jpg    540w,
+                        ./images/team-micha-tab-354@2x.jpg    708w,
+                        ./images/team-micha-mob-450@2x.jpg    900w
+                                                                " sizes="(min-width:1200px) 270px, (min-width:767px) 354px, 450px"
+                src="./images/team-micha-desk-1.jpg" alt="UI Designer">
             <div class="team-cards"><h3 class="team-cards__subtitle">Михайло Єрмаков</h3>  
             <p class="team-cards__desc">UI Designer</p>
             <div>
@@ -261,7 +351,8 @@
     </main>
     <footer class="footer">
         <div class=" footer-container container">
-            <div class="footer-logo-left">
+            <div class="tab-footer">
+            <div class="footer-logo-left">    
         <a href="/index.html" class="footer-logo"><span class="blue">Web</span>Studio</a>
         <address class="address">
         <ul class="footer-info">
@@ -289,6 +380,7 @@
             </svg></a></li>
         </ul>
         </div>
+        </div>
         <div class="footer-mailing">
         <h3 class="footer-mailing__text">Підпишіться на розсилку</h3>
         <form class="footer-submit">
@@ -302,4 +394,5 @@
         </div>
     </footer>
     <script src="./modal.js"></script>
+    <script defer src="js/mobile-menu.js"></script>
 </body>
