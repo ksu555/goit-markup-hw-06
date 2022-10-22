@@ -1,9 +1,9 @@
 .close-button {
-    margin: 9px 9px;
+    margin: 8px 8px;
     background: var(--main-title-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
-
 }
+
 
 .backdrop {
     @include position(fixed, 0, 0);
@@ -53,7 +53,7 @@
 }
 
 .modal {
-    @include size(528px, 581px);
+    @include size(450px, 609px);
     
     background-color: var(--main-title-color);
 
@@ -62,7 +62,13 @@
     transform: translate(-50%, -50%);
     padding: 40px;
 
+@media screen and (min-width:768px) {
+        @include size(450px, 609px);
+    }
 
+@media screen and (min-width:1200px) {
+    @include size(528px, 581px);
+    }
 }
 
 .modal-title {
@@ -118,10 +124,14 @@
     margin-top: 4px;
     padding: 12px 16px;
     resize: none;
-    @include size(448px, 120px);
+    @include size(370px, 138px);
 
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+
+    @media screen and (min-width:1200px) {
+        @include size(448px, 120px);
+        }
 }
 
 .textarea placeholder {
@@ -140,15 +150,18 @@
 }
 
 .accept-title {
-    @include font(400, 14px, 1.71);
+    @include font(400, 12px, 1.17);
 
     letter-spacing: 0.03em;
     color: var(--subtitle-text-color);
-
     @include display(flex, center);
-
     justify-content: center;
     margin-left: 8px;
+
+    @media screen and (min-width:1200px) {
+        @include font(400, 14px, 1.71);
+        
+        }
 }
 
 .accept-title .checkbox:checked+svg {
@@ -173,13 +186,18 @@
 }
 
 .accept-document {
-    @include font(400, 14px, 1.71);
+    @include font(400, 12px, 1.17);
 
     letter-spacing: 0.03em;
     text-decoration-line: underline;
     padding-left: 2px;
 
     color: #2196F3;
+
+    @media screen and (min-width:1200px) {
+        @include font(400, 14px, 1.71);
+        @include display(flex, center);
+        }
 }
 
 .button-send {
