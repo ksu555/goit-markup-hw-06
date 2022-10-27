@@ -196,7 +196,7 @@
 
 .footer-submit {
     outline: none;
-    
+   
     @media screen and (min-width:768px) {
             display: table-caption;
         }
@@ -225,6 +225,9 @@
             display: inline-block;
             outline-style: none;
             margin-bottom: 20px;
+            @media screen and (max-width:480px) {
+                    @include size(300px, 50px);
+                }
             
             @media screen and (min-width:768px) {
                 @include size(450px, 50px);
