@@ -46,11 +46,16 @@ a {
 }
 
 .container {
-  width: 480px;
+  width: auto;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -134,8 +139,14 @@ a {
 }
 
 .liste {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .liste {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .visually-hidden {
@@ -554,9 +565,9 @@ a {
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding-top: 5px;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 .menu-toggle {
@@ -768,6 +779,11 @@ a {
     margin-right: 276px;
   }
 }
+@media screen and (max-width: 480px) {
+  .nav-mobile .logo {
+    margin-right: 120px;
+  }
+}
 @media screen and (min-width: 768px) {
   .nav-mobile {
     margin-right: 87px;
@@ -963,10 +979,20 @@ a {
     width: calc((100% - 60px) / 2);
   }
 }
+@media screen and (max-width: 480px) {
+  .list__frame {
+    margin-bottom: 30px;
+  }
+}
 .list__item {
   padding: 25px 190px;
   background-color: var(--button-color);
   display: block;
+}
+@media screen and (max-width: 480px) {
+  .list__item {
+    padding: 25px 142px;
+  }
 }
 @media screen and (min-width: 768px) {
   .list__item {
@@ -1005,6 +1031,11 @@ a {
   letter-spacing: 0.03em;
   text-align: left;
   min-width: 450px;
+}
+@media screen and (max-width: 480px) {
+  .list__text {
+    min-width: 318px;
+  }
 }
 @media screen and (min-width: 768px) {
   .list__text {
@@ -1505,6 +1536,12 @@ a {
   display: inline-block;
   outline-style: none;
   margin-bottom: 20px;
+}
+@media screen and (max-width: 480px) {
+  .footer-submit__input-email {
+    width: 300px;
+    height: 50px;
+  }
 }
 @media screen and (min-width: 768px) {
   .footer-submit__input-email {
