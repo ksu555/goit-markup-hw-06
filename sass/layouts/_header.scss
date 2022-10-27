@@ -4,7 +4,7 @@
         display: flex;
         justify-content: space-between;
         padding-top: 5px;
-        align-items: baseline;
+        align-items: center;
     }
 }
 
@@ -208,9 +208,14 @@
 .nav-mobile{
    
      & .logo{
+
         @media screen and (max-width:767px) {
                 margin-right: 276px;
             }
+        @media screen and (max-width:480px) {
+                            margin-right: 120px;
+                        }
+
          
      }
     
