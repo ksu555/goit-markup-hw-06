@@ -8,12 +8,15 @@
 }
 
 .container {
-    width: 480px;
+    width: auto;
     padding-left: 15px;
     padding-right: 15px;
     
     margin-left: auto;
     margin-right: auto;
+    @media screen and (min-width:480px) {
+            width: 480px;
+        }
 
     @media screen and (min-width:768px){
         width: 768px;
@@ -76,8 +79,13 @@
 }
 
 .liste {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    
+    @media screen and (min-width:1200px) {
+            padding-top: 94px;
+                padding-bottom: 94px;
+        }
 }
 
 .visually-hidden {
